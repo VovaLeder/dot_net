@@ -5,7 +5,8 @@ namespace genericsTask
     class MainClass {         
         static void Main(string[] args)
         {
-            
+            File.WriteAllText("log.log", "");
+
             LocalFileLogger<int> lflInt = new LocalFileLogger<int>();
 
             lflInt.LogInfo("SomeInfo");

@@ -15,7 +15,7 @@ namespace Collections_Task
 
         public override string ToString()
         {
-            return Name + Id;
+            return "Entity(Id: " + Id + ")";
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Collections_Task
 
             foreach (KeyValuePair<int, List<Entity>> keyvalue in dict)
             {
-                Console.WriteLine($"{keyvalue.Key}: {keyvalue.Value.ToString()}");
+                Console.WriteLine($"Key = {keyvalue.Key}, Value = List {"{"} {String.Join(", ", keyvalue.Value)} {"}"}");
             }
 
         }
