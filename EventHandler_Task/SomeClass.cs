@@ -19,6 +19,7 @@ namespace dot_net_1
             
             return c;
         }
+
         public void Run(){
             char c = getChar();
             while (c != 'c')

@@ -15,6 +15,7 @@ namespace genericsTask
 
 
             LocalFileLogger<string> lflString = new LocalFileLogger<string>();
+            
             lflString.LogInfo("SomeInfo");
             lflString.LogWarning("SomeWarning");
             lflString.LogError("SomeError", new Exception());
