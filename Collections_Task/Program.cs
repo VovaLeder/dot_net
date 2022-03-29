@@ -26,13 +26,11 @@ namespace Collections_Task
         }
 
         static Dictionary<int, List<Entity>> ArrayToDictionary(Entity[] entities){
+
             Dictionary<int, List<Entity>> dict = new Dictionary<int, List<Entity>>();
 
             foreach(Entity entity in entities){
-                if (!dict.ContainsKey(entity.ParentId))
-                {
-                    dict.Add(entity.ParentId, new List<Entity>());
-                }
+                if (!dict.ContainsKey(entity.ParentId)) dict.Add(entity.ParentId, new List<Entity>());
                 dict[entity.ParentId].Add(entity);
             }
 
