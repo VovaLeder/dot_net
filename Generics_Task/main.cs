@@ -7,18 +7,18 @@ namespace genericsTask
         {
             File.WriteAllText("log.log", "");
 
-            LocalFileLogger<int> lflInt = new LocalFileLogger<int>();
+            LocalFileLogger<int> lflInt = new LocalFileLogger<int>("log.log");
 
             lflInt.LogInfo("SomeInfo");
             lflInt.LogWarning("SomeWarning");
             lflInt.LogError("SomeError", new Exception());
 
 
-            LocalFileLogger<string> lflString = new LocalFileLogger<string>();
+            LocalFileLogger<string> lflString = new LocalFileLogger<string>("log.log");
             
-            lflString.LogInfo("SomeInfo");
-            lflString.LogWarning("SomeWarning");
-            lflString.LogError("SomeError", new Exception());
+            lflString.LogInfo("SomeInfoAboutString");
+            lflString.LogWarning("SomeWarningAboutString");
+            lflString.LogError("SomeErrorAboutString", new Exception());
 
 
         }

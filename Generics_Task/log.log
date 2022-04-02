@@ -1,6 +1,6 @@
 [Info]: [System.Int32] : SomeInfo
 [Warning] : [System.Int32] : SomeWarning
 [Error] : [System.Int32] : SomeError. Exception of type 'System.Exception' was thrown.
-[Info]: [System.String] : SomeInfo
-[Warning] : [System.String] : SomeWarning
-[Error] : [System.String] : SomeError. Exception of type 'System.Exception' was thrown.
+[Info]: [System.String] : SomeInfoAboutString
+[Warning] : [System.String] : SomeWarningAboutString
+[Error] : [System.String] : SomeErrorAboutString. Exception of type 'System.Exception' was thrown.
