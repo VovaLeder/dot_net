@@ -10,12 +10,12 @@ namespace Threads
         {
             // Притворяемся, что делаем что то.
             Thread.Sleep(10_000);
+            
             if (message.Contains("fall"))
             {
-                return $"!!! The message {message} has been fallen down... as asked";
+                throw new Exception("I fell down as you asked");
             }
-            var id = Guid.NewGuid().ToString("D");
-            return $"!!! The message {message} has been sent. Unique ID: " + id;
+            return Guid.NewGuid().ToString("D");
         }
     }
 }

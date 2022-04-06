@@ -54,14 +54,27 @@
 
                     if (com != "/end") req_args.Add(com);
                 }
-            }            
+            }    
+            Console.WriteLine("> --- App is shutting down.");        
         }
 
         public static void HandleRequest(String com, string[] args)
         {
             DummyRequestHandler drh = new DummyRequestHandler();
+            var id = Guid.NewGuid().ToString("D");
+            Console.WriteLine($"-!- The message {com} has been sent. Unique id: {id}.");
+            Console.Write("> ");
 
-            Console.WriteLine(drh.HandleRequest(com, new string[1]));
+            try
+            {
+                var ans_id = drh.HandleRequest(com, args);
+                Console.WriteLine($"-!- The message with id={id} received an answer with unique id: {ans_id}.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"!!! The message with id={id} fell down with an exception: {e.Message}");
+            }
+            
             Console.Write("> ");
         }
 
