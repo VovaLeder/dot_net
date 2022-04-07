@@ -22,9 +22,7 @@
             {
                 if (com == "/end")
                 {
-                    Thread thread = new Thread(() => HandleRequest(req_com, req_args.ToArray()));
-                    thread.IsBackground = true;
-                    thread.Start();
+                    ThreadPool.QueueUserWorkItem(callback => HandleRequest(com, req_args.ToArray()));
 
                     Console.Write("> --- Input text for your request. To exit print /exit\n> ");
 
